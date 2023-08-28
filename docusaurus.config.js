@@ -48,12 +48,12 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Remove this to remove the "edit this page" links.
-          editUrl: `${gitHubUrl}/edit/main/`,
+          editUrl: `${siteGitHubUrl}/edit/main/`,
         },
         blog: {
           showReadingTime: true,
           // Remove this to remove the "edit this page" links.
-          editUrl: `${gitHubUrl}/edit/main/`,
+          editUrl: `${siteGitHubUrl}/edit/main/`,
         },
         theme: {
           customCss: [require.resolve('./src/css/custom.css')],
