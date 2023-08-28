@@ -19,7 +19,7 @@ const config = {
   tagline: 'Compose practical distributed replication mechanisms',
   favicon: 'img/favicon.ico',
 
-  url: 'https://replica-io.github.io',
+  url: 'https://replica-io.dev',
   baseUrl: '/',
 
   customFields: {
