@@ -65,6 +65,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {
+          name: 'keywords',
+          content: 'decentralization, decentralized-computing, distributed-systems, fault-tolerance, replication',
+        },
+      ],
       colorMode: {
         defaultMode: 'dark',
         respectPrefersColorScheme: true,
