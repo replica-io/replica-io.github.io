@@ -65,6 +65,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        respectPrefersColorScheme: true,
+      },
       image: 'img/social-card.png',
       navbar: {
         title: 'Replica_IO',
