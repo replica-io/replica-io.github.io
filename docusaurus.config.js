@@ -51,6 +51,8 @@ const config = {
           editUrl: `${siteGitHubUrl}/edit/main/`,
         },
         blog: {
+          blogTitle: 'Replica_IO Blog',
+          blogDescription: 'Blog of the Replica_IO project - an open-source framework for building practical distributed replication mechanisms.',
           showReadingTime: true,
           // Remove this to remove the "edit this page" links.
           editUrl: `${siteGitHubUrl}/edit/main/`,
@@ -83,6 +85,10 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+          {
+            to: 'blog',
+            label: 'Blog',
+          },
           {
             href: gitHubUrl,
             label: 'GitHub',
