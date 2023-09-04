@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreplica_io=self.webpackChunkreplica_io||[]).push([[921],{717:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/story","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog of the Replica_IO project - an open-source framework for building practical distributed replication mechanisms.","blogTitle":"Replica_IO Blog"}')}}]);
