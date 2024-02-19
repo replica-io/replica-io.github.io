@@ -6,7 +6,11 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const lightCodeTheme = prismThemes.github;
 const darkCodeTheme = prismThemes.dracula;
 
+const sponsorUrl = 'https://github.com/sponsors/replica-io';
 const gitHubUrl = 'https://github.com/replica-io/replica-io';
+const discordUrl = 'https://discordapp.com/invite/CzPfN75URD';
+const twitterUrl = 'https://x.com/Replica_IO';
+const youtubeUrl = 'https://www.youtube.com/@Replica_IO';
 const siteGitHubUrl = 'https://github.com/replica-io/replica-io.github.io';
 const siteLicense = {
   name: "Creative Commons Attribution 4.0 International",
@@ -92,9 +96,39 @@ const config = {
             label: 'Blog',
           },
           {
-            href: gitHubUrl,
-            label: 'GitHub',
+            to: sponsorUrl,
+            'aria-label': 'Sponsor',
+            html: '<i class="fa-regular fa-heart" style="color: #c96198;" />',
             position: 'right',
+            className: 'navbar-icon',
+          },
+          {
+            href: gitHubUrl,
+            'aria-label': 'GitHub',
+            html: '<i class="fa-brands fa-github" />',
+            position: 'right',
+            className: 'navbar-icon',
+          },
+          {
+            href: discordUrl,
+            'aria-label': 'Discord',
+            html: '<i class="fa-brands fa-discord" />',
+            position: 'right',
+            className: 'navbar-icon',
+          },
+          {
+            href: twitterUrl,
+            'aria-label': 'Twitter / X',
+            html: '<i class="fa-brands fa-x-twitter" />',
+            position: 'right',
+            className: 'navbar-icon',
+          },
+          {
+            href: youtubeUrl,
+            'aria-label': 'YouTube',
+            html: '<i class="fa-brands fa-youtube" />',
+            position: 'right',
+            className: 'navbar-icon',
           },
         ],
       },
@@ -106,11 +140,11 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/CzPfN75URD',
+                href: discordUrl,
               },
               {
                 label: 'Twitter / X',
-                href: 'https://x.com/Replica_IO',
+                href: twitterUrl,
               },
             ],
           },
@@ -123,7 +157,7 @@ const config = {
               },
               {
                 label: 'YouTube',
-                href: 'https://www.youtube.com/@Replica_IO',
+                href: youtubeUrl,
               },
             ],
           },
