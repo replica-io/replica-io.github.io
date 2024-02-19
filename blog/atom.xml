@@ -14,37 +14,52 @@
         <updated>2023-09-04T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The Story Behind Replica_IO - an open-source framework for building practical distributed replication mechanisms.]]></summary>
         <content type="html"><![CDATA[<p>This post tells how the Replica_IO project originated and explains the
-motivation behind it.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="my-background">My Background<a href="#my-background" class="hash-link" aria-label="Direct link to My Background" title="Direct link to My Background">​</a></h2><p>I'd like to start by tell you a bit about my professional background.
+motivation behind it.</p>
+<!-- -->
+<!-- -->
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="my-background">My Background<a href="https://replica-io.dev/blog/2023/09/04/the-story-behind-replica_io#my-background" class="hash-link" aria-label="Direct link to My Background" title="Direct link to My Background">​</a></h2>
+<p>I'd like to start by tell you a bit about my professional background.
 I'm a research engineer with quite some experience in software
-engineering. I began working as a software engineer back in 2009.</p><p>First 7 years, I was mostly focused on developing low-level system
+engineering. I began working as a software engineer back in 2009.</p>
+<p>First 7 years, I was mostly focused on developing low-level system
 software: I worked with such things as Linux kernel, microcontrollers,
 hardware emulation, and trusted execution. Back then, I particularly
 enjoyed contributing to <a href="http://qemu.org/" target="_blank" rel="noopener noreferrer">Qemu</a>, a generic and
 open-source machine emulator and virtualizer. My contribution included
 enhancing emulation of the ARM platform and enabling multithreading
-support in the generic binary translation engine</p><p>In 2016, I took a big leap and came into research and development in
+support in the generic binary translation engine</p>
+<p>In 2016, I took a big leap and came into research and development in
 the areas of blockchain, distributed and decentralized systems. Soon
 enough, I became absolutely excited about this, and since then, I keep
 expanding my knowledge and experience in that area, in particular,
 designing and implementing distributed protocols. During that period,
 apart from proprietary stuff, I worked on the following open-source
-projects:</p><ul><li><a href="http://github.com/hyperledger-labs/minbft" target="_blank" rel="noopener noreferrer">MinBFT Hyperledger Lab</a> — an implementation of the MinBFT
+projects:</p>
+<ul>
+<li><a href="http://github.com/hyperledger-labs/minbft" target="_blank" rel="noopener noreferrer">MinBFT Hyperledger Lab</a> — an implementation of the MinBFT
 consensus protocol as a pluggable component. I was the main author,
-contributor, and maintainer of the project.</li><li><a href="http://github.com/filecoin-project/mir" target="_blank" rel="noopener noreferrer">Mir</a> — a framework for implementing, debugging, and analyzing
+contributor, and maintainer of the project.</li>
+<li><a href="http://github.com/filecoin-project/mir" target="_blank" rel="noopener noreferrer">Mir</a> — a framework for implementing, debugging, and analyzing
 distributed protocols. My main contribution was implementation of
 the checkpointing mechanism, protocol garbage collection, and
-reproducible testing with simulated time.</li><li><a href="http://fil.space/#components" target="_blank" rel="noopener noreferrer">Interplanetary Consensus (IPC)</a> — a framework to enable
+reproducible testing with simulated time.</li>
+<li><a href="http://fil.space/#components" target="_blank" rel="noopener noreferrer">Interplanetary Consensus (IPC)</a> — a framework to enable
 on-demand horizontal scalability of the Filecoin blockchain. My
 main contribution was redesign and implementation of the atomic
-cross-chain transaction execution protocol in Rust.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="implementing-distributed-protocols">Implementing Distributed Protocols<a href="#implementing-distributed-protocols" class="hash-link" aria-label="Direct link to Implementing Distributed Protocols" title="Direct link to Implementing Distributed Protocols">​</a></h2><p>So much was I excited about distributed systems, but, after a while, I
+cross-chain transaction execution protocol in Rust.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="implementing-distributed-protocols">Implementing Distributed Protocols<a href="https://replica-io.dev/blog/2023/09/04/the-story-behind-replica_io#implementing-distributed-protocols" class="hash-link" aria-label="Direct link to Implementing Distributed Protocols" title="Direct link to Implementing Distributed Protocols">​</a></h2>
+<p>So much was I excited about distributed systems, but, after a while, I
 started feeling like there's something fundamentally wrong in how we
-usually design and implement them.</p><p>Distributed protocols are notoriously complex, and it took academia
+usually design and implement them.</p>
+<p>Distributed protocols are notoriously complex, and it took academia
 significant effort to develop a solid theoretical foundation for them.
 Due to inherent concurrency, the reasoning about distributed systems
 is quite tricky, and there are lots of pitfalls where one gets trapped
 pretty quickly, unless being extremely careful. Though, I find this
 really fascinating because I particularly love digging deep and
-thinking thoroughly.</p><p>However, the way distributed protocols are conventionally described on
+thinking thoroughly.</p>
+<p>However, the way distributed protocols are conventionally described on
 paper makes it hardly possible to implement them correctly with
 confidence; it's simply too far from the realities of software
 engineering. Not only academic papers often neglect some details of
@@ -52,7 +67,8 @@ practical importance but also the language and notation used there,
 they require nontrivial translation to the languages and patterns
 commonly used in programming. Add there typical issues that come up
 inevitably when programming concurrent systems, time pressure, and we
-end up with a great mess that one can hardly comprehend and maintain.</p><p>Moreover, it seems like those engineers who get their hands dirty and
+end up with a great mess that one can hardly comprehend and maintain.</p>
+<p>Moreover, it seems like those engineers who get their hands dirty and
 implement distributed protocols for practical use tend to jump in and
 try applying whatever approach they were used to or that was implied
 by the surrounding system. Although one can certainly learn a lot from
@@ -62,7 +78,8 @@ that, since this kind of code is quite hard to get right, inevitable
 mistakes creep into such implementations and lurk there unnoticed.
 Even when some of those mistakes get revealed, individual projects are
 usually too busy and too specific to keep following and effectively
-learning from each other.</p><p>Having implemented a couple of distributed protocols myself, I find
+learning from each other.</p>
+<p>Having implemented a couple of distributed protocols myself, I find
 this status quo deeply unsatisfactory, especially when it comes to
 distributed replication mechanisms such as consensus protocols. After
 all, they are supposed to ensure consistency and availability in such
@@ -73,7 +90,8 @@ particularly those capable of tolerating arbitrary (Byzantine) faults,
 is their requirement for additional resources and reduced performance.
 While it's certainly true that high reliability doesn't come for free,
 I think the concerns regarding complexity do actually matter a lot in
-the end; it's simply hard to get it right.</p><p>I think decentralized Byzantine-fault tolerant mechanisms should
+the end; it's simply hard to get it right.</p>
+<p>I think decentralized Byzantine-fault tolerant mechanisms should
 prevail in future computing systems and we can do a much better job
 working towards that. I believe such complex problems can have neat
 solutions, not only efficient, but also easy to use. Clearly,
@@ -81,39 +99,46 @@ discovering and developing such solutions does take quite some effort.
 There must have been attempts to solve this problem, apparently not
 very successful. But since I like to think of myself as someone
 discovering smart solutions to hard problems, I'm not too scared; I'm
-stubborn enough 😄</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="replica_io">Replica_IO<a href="#replica_io" class="hash-link" aria-label="Direct link to Replica_IO" title="Direct link to Replica_IO">​</a></h2><p>So I was thinking about this for years, but never managed to find room
+stubborn enough 😄</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="replica_io">Replica_IO<a href="https://replica-io.dev/blog/2023/09/04/the-story-behind-replica_io#replica_io" class="hash-link" aria-label="Direct link to Replica_IO" title="Direct link to Replica_IO">​</a></h2>
+<p>So I was thinking about this for years, but never managed to find room
 for seriously working on it. Suddenly, in February 2023, I was
 affected by a lay-off in <a href="https://protocol.ai/" target="_blank" rel="noopener noreferrer">Protocol Labs</a> and had to
 leave; by that time, I had worked with the company as a long-term
 collaborator, a Research Engineer at the <a href="https://research.protocol.ai/groups/consensuslab/" target="_blank" rel="noopener noreferrer">ConsensusLab</a>
 group, for almost a year. After a while, I realized that this is
 actually a great chance to finally start working on what I was
-dreaming of.</p><p>Initially, I thought I would just take a break and spend some time on
+dreaming of.</p>
+<p>Initially, I thought I would just take a break and spend some time on
 a hobby project. I already had a name for it — Replica_IO, which had
 come to my mind a few months before, as I had been yet again thinking
 about communication between replicas in a distributed replication
 system. However, once I started asking myself about my real intention
 behind this, I realized that it's much bigger than just playing with a
 pet project: what I really want is to make a breakthrough in how
-distributed systems are designed and implemented!</p><p>In March 2023, I decided to found the Replica_IO project and work on
+distributed systems are designed and implemented!</p>
+<p>In March 2023, I decided to found the Replica_IO project and work on
 it full time as an independent research engineer. Since I believe in
 open source, open innovation and collaboration, I also wanted to make
 it radically open and started developing it entirely in the open from
 day one. I <a href="https://github.com/replica-io/replica-io/issues/2" target="_blank" rel="noopener noreferrer">described</a> the project's purpose, goals, and
 approach, <a href="https://github.com/replica-io/replica-io/issues/3" target="_blank" rel="noopener noreferrer">created</a> its logo, <a href="https://github.com/replica-io/replica-io/issues/1" target="_blank" rel="noopener noreferrer">defined</a> the initial
-roadmap, and started working on the <a href="https://github.com/replica-io/replica-io/milestone/1" target="_blank" rel="noopener noreferrer">first milestone</a>.</p><p>At the time of this writing, I'm <a href="https://github.com/replica-io/replica-io/issues/7" target="_blank" rel="noopener noreferrer">exploring</a> some relevant
+roadmap, and started working on the <a href="https://github.com/replica-io/replica-io/milestone/1" target="_blank" rel="noopener noreferrer">first milestone</a>.</p>
+<p>At the time of this writing, I'm <a href="https://github.com/replica-io/replica-io/issues/7" target="_blank" rel="noopener noreferrer">exploring</a> some relevant
 state of the art, <a href="https://github.com/replica-io/replica-io/wiki/State-of-the-art-exploration" target="_blank" rel="noopener noreferrer">summarizing</a> the findings.
 Approaching this in a systematic way lets me dive deeper into the
 problem, form a more educated opinion, find some inspiration, and
 ultimately come up with effective ideas for achieving the project's
-key technical objectives.</p><p>I understand how ambitious the goals of this project are and that it
+key technical objectives.</p>
+<p>I understand how ambitious the goals of this project are and that it
 may take long time to get there, but I'm absolutely sure it is worth
 the effort. I'm surprised how much attention the project has already
 attracted and would like to see great experts from the relevant fields
 become involved and help to make it real. I also count on getting enough
 support for this initiative, and I'm grateful to those who have
-already been helping 🙏</p><p>If you'd like to learn more about this project, please visit the
-<a href="/about">About</a> page and watch <a href="https://youtu.be/oJlryr6bMCo" target="_blank" rel="noopener noreferrer">this talk</a>.</p>]]></content>
+already been helping 🙏</p>
+<p>If you'd like to learn more about this project, please visit the
+<a href="https://replica-io.dev/about">About</a> page and watch <a href="https://youtu.be/oJlryr6bMCo" target="_blank" rel="noopener noreferrer">this talk</a>.</p>]]></content>
         <author>
             <name>Sergey Fedorov</name>
             <email>sergefdrv@replica-io.dev</email>

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkreplica_io=self.webpackChunkreplica_io||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"The Story Behind Replica_IO","permalink":"/blog/2023/09/04/the-story-behind-replica_io"}]}')}}]);
