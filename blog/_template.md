@@ -10,6 +10,6 @@ hide_table_of_contents: false
 
 
 
-<!-- Summary part ends here -->
-<!--truncate-->
+{/* Summary part ends here */}
+{/*truncate*/}
 

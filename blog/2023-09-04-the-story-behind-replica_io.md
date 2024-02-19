@@ -8,7 +8,8 @@ tags: ["introduction", "announcement", "story"]
 This post tells how the Replica_IO project originated and explains the
 motivation behind it.
 
-<!--truncate-->
+{/* Summary part ends here */}
+{/*truncate*/}
 
 ## My Background
 
