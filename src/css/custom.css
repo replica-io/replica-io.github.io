@@ -5,3 +5,5 @@
   max-width: 560px;
   margin: 0 auto;
 }
+
+@import '~@fortawesome/fontawesome-free/css/all.css';
