@@ -13,7 +13,7 @@ const twitterUrl = 'https://x.com/Replica_IO';
 const youtubeUrl = 'https://www.youtube.com/@Replica_IO';
 const siteGitHubUrl = 'https://github.com/replica-io/replica-io.github.io';
 const siteLicense = {
-  name: "Creative Commons Attribution 4.0 International",
+  name: "CC-BY-4.0",
   icon: "https://i.creativecommons.org/l/by/4.0/80x15.png",
   url: "http://creativecommons.org/licenses/by/4.0/",
 };
@@ -31,6 +31,7 @@ const config = {
   customFields: {
     description: 'An open-source framework for building practical distributed replication mechanisms.',
     gitHubUrl: gitHubUrl,
+    siteLicense: siteLicense,
   },
 
   // GitHub pages deployment config.
@@ -162,7 +163,7 @@ const config = {
             ],
           },
         ],
-        copyright: `<div>Made with ❤️ on Earth.</div><div><a rel="license" href="${siteLicense.url}" target="_blank"> <img alt="${siteLicense.name}" style="border-width:0" src="${siteLicense.icon}" /></a> The content of this site is licensed under the <a rel="license" href="${siteLicense.url}" target="_blank">${siteLicense.name}</a> license.</div><div>© ${new Date().getFullYear()} <a target="_blank" href="${siteGitHubUrl}/graphs/contributors">Replica_IO website contributors</a>.</div><div>Built with <a target="_blank" href="https://docusaurus.io/">Docusaurus</a>.</div>`,
+        copyright: `© ${new Date().getFullYear()} <a target="_blank" href="${siteGitHubUrl}/graphs/contributors">Replica_IO website contributors</a>.`,
       },
       prism: {
         theme: lightCodeTheme,
