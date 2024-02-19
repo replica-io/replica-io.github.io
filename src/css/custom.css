@@ -12,6 +12,12 @@
   font-size: 24px;
 }
 
-.sponsor-icon {
+.sponsor-icon,
+.sponsor-icon:hover {
   color: #c96198;
+}
+
+.sponsor-icon:hover i {
+  transition: transform var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+  transform: scale(1.2);
 }
