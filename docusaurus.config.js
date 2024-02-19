@@ -98,9 +98,9 @@ const config = {
           {
             to: sponsorUrl,
             'aria-label': 'Sponsor',
-            html: '<i class="fa-regular fa-heart" style="color: #c96198;" />',
+            html: '<i class="fa-regular fa-heart" />',
             position: 'right',
-            className: 'navbar-icon',
+            className: 'navbar-icon sponsor-icon',
           },
           {
             href: gitHubUrl,
