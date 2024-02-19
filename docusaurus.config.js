@@ -1,8 +1,10 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import { themes as prismThemes } from 'prism-react-renderer';
+
+const lightCodeTheme = prismThemes.github;
+const darkCodeTheme = prismThemes.dracula;
 
 const gitHubUrl = 'https://github.com/replica-io/replica-io';
 const siteGitHubUrl = 'https://github.com/replica-io/replica-io.github.io';
@@ -46,7 +48,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: './sidebars.js',
           // Remove this to remove the "edit this page" links.
           editUrl: `${siteGitHubUrl}/edit/main/`,
         },
@@ -58,7 +60,7 @@ const config = {
           editUrl: `${siteGitHubUrl}/edit/main/`,
         },
         theme: {
-          customCss: [require.resolve('./src/css/custom.css')],
+          customCss: ['./src/css/custom.css'],
         },
       }),
     ],
@@ -131,8 +133,9 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ['bash'],
       },
     }),
 };
 
-module.exports = config;
+export default config;
