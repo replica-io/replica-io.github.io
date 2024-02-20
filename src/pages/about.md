@@ -7,12 +7,12 @@ title: About
 Replica_IO is an open-source framework for composing practical
 distributed replication mechanisms.
 
-## Status 🌱
+## 🌱 Status
 
 This project is in its early stages. It's being developed entirely in
-the open from day one. So more stuff will follow. Stay tuned! 👀
+the open from day one. So more stuff will follow. Stay tuned! 📡
 
-## Purpose 🌟
+## 🌟 Purpose
 
 The purpose of this project is to advance computing by making highly
 reliable distributed systems more practical to implement.
@@ -34,7 +34,7 @@ only efficient, but also easy to properly apply in practice.
 Discovering and developing those solutions obviously requires
 significant effort. This project is making such effort.
 
-## Goal 🎯
+## 🎯 Goal
 
 The goal of this project is to develop a well-supported and widely
 used state-of-the-art framework for building distributed replication
@@ -71,7 +71,7 @@ the ability to recover from a massive system crash (durability).
 Last, but not least, it should be highly ergonomic so that developers
 enjoy playing with it while effectively solving their problems.
 
-## Approach 🤓
+## 🤓 Approach
 
 The approach of this project is best characterized as follows:
 
@@ -84,7 +84,7 @@ The approach of this project is best characterized as follows:
   * _iterative:_ starting small — growing strong, delivering value
     regularly and persistently.
 
-## Roadmap 🏁
+## 🏁 Roadmap
 
 - [ ] [M0.1: Initial Ideas](https://github.com/replica-io/replica-io/milestone/1) — exploring the state of the art and coming up with clever ideas
 - [ ] [M0.2: Core Concepts](https://github.com/replica-io/replica-io/milestone/2) — developing the rough ideas into clearly formulated concepts
@@ -93,7 +93,7 @@ The approach of this project is best characterized as follows:
 - [ ] [M2: MVP](https://github.com/replica-io/replica-io/milestone/5) — unlocking some actual use cases
 - [ ] [M3: Ready for Integration](https://github.com/replica-io/replica-io/milestone/6) — releasing a version ready for integration into production
 
-## Contributing 🙏
+## 🙏 Contributing
 
 The project's goal is quite ambitious, so your support is more than
 welcome! 🤗
