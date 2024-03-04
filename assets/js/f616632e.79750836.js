@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreplica_io=self.webpackChunkreplica_io||[]).push([[412],{1400:a=>{a.exports=JSON.parse('{"label":"technical","permalink":"/blog/tags/technical","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
