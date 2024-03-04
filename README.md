@@ -1,7 +1,7 @@
 # Replica_IO Website
 
 This is a website for the [Replica_IO][replica-io] project. It is built using
-[Docusaurus 2](https://docusaurus.io/), a modern static website
+[Docusaurus](https://docusaurus.io/), a modern static website
 generator.
 
 [replica-io]: https://github.com/replica-io/replica-io
