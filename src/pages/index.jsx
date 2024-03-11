@@ -63,7 +63,7 @@ export default function Home() {
                   tools, and guidelines for developing core mechanisms of
                   fault-tolerant distributed systems. Possible areas of
                   application include blockchain, cloud computing,
-                  distritued databases, etc. Following are the key areas
+                  distributed databases, etc. Following are the key areas
                   of focus:
                 </p>
               </p>
