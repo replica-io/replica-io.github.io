@@ -61,6 +61,8 @@ const config = {
           blogTitle: 'Replica_IO Blog',
           blogDescription: 'Blog of the Replica_IO project - an open-source framework for building practical distributed replication mechanisms.',
           showReadingTime: true,
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
           // Remove this to remove the "edit this page" links.
           editUrl: `${siteGitHubUrl}/edit/main/`,
         },
