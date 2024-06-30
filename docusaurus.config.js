@@ -8,7 +8,7 @@ const darkCodeTheme = prismThemes.dracula;
 
 const sponsorUrl = 'https://github.com/sponsors/replica-io';
 const gitHubUrl = 'https://github.com/replica-io/replica-io';
-const discordUrl = 'https://discordapp.com/invite/CzPfN75URD';
+const discordUrl = 'https://discord.replica-io.dev';
 const twitterUrl = 'https://x.com/Replica_IO';
 const youtubeUrl = 'https://www.youtube.com/@Replica_IO';
 const siteGitHubUrl = 'https://github.com/replica-io/replica-io.github.io';
