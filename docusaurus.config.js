@@ -2,6 +2,7 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 import { themes as prismThemes } from 'prism-react-renderer';
+import { scramble, unscramble } from "botex";
 
 const lightCodeTheme = prismThemes.github;
 const darkCodeTheme = prismThemes.dracula;
@@ -17,7 +18,9 @@ const siteLicense = {
   icon: "https://i.creativecommons.org/l/by/4.0/80x15.png",
   url: "http://creativecommons.org/licenses/by/4.0/",
 };
-
+const email = 'contact@replica-io.dev';
+const key = "abc123";
+const obfuscatedEmail = scramble(email, key);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -162,6 +165,10 @@ const config = {
                 label: 'YouTube',
                 href: youtubeUrl,
               },
+              {
+                label:'Email',
+                href:`mailto:${unscramble(obfuscatedEmail, key)}`
+              }
             ],
           },
         ],
