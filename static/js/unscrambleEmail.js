@@ -1,17 +1,16 @@
+import { unscramble } from "botex";
 
-// Function to unscramble and update the email link
-function unscrambleEmail(event) {
-  event.preventDefault(); // Prevent the default mailto action
-  // take this from environment variables 
-  // in obfuscated form
-  // then unscramble it from the key (that too from the environment variables)
-  const emailSalt = 'contact@replica-io.dev';
-
-  const email = emailSalt; // Here, the email is directly assigned
-
-  // Update the href attribute of the email link
-  const emailLink = document.getElementById('emailLink');
-  if (emailLink) {
-    window.location.href = `mailto:${email}`; // Navigate to the unscrambled email link
-  }
-}
+document.addEventListener("DOMContentLoaded", function () {
+  document.body.addEventListener("click", function (event) {
+    if (event.target.matches('a[href="/#contact-email"]')) {
+      event.preventDefault();
+      const contactEmailKey = "CHKXRg4cdMZ0XADF";
+      const obfuscatedContactEmail =
+        "BwC1311181fB4C1sBzmC14162k1dByC112z16132t1o1jBh";
+      window.location.href = `mailto:${unscramble(
+        obfuscatedContactEmail,
+        contactEmailKey
+      )}`;
+    }
+  });
+});
