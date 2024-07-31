@@ -1,21 +1,14 @@
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { unscramble } from "botex";
 
-export function onRouteDidUpdate({ location, previousLocation }) {
+const botexKey = "CHKXRg4cdMZ0XADF";
+const obfuscatedEmail = "BwC1311181fB4C1sBzmC14162k1dByC112z16132t1o1jBh";
+
+export function onRouteUpdate({ location, previousLocation }) {
   if (ExecutionEnvironment.canUseDOM) {
-    setTimeout(() => {
-      document.body.addEventListener("click", function (event) {
-        if (event.target.matches('a[href="/#contact-email"]')) {
-          event.preventDefault();
-          const contactEmailKey = "CHKXRg4cdMZ0XADF";
-          const obfuscatedContactEmail =
-            "BwC1311181fB4C1sBzmC14162k1dByC112z16132t1o1jBh";
-          const unscrambledEmail = unscramble(
-            obfuscatedContactEmail,
-            contactEmailKey
-          );
-          window.location.href = `mailto:${unscrambledEmail}`;
-        }
-      });
-    }, 1000); // Delay to ensure the DOM is fully updated
+    if (location.pathname === '/' && location.hash === '#contact-email') {
+      const email = unscramble(obfuscatedEmail, botexKey);
+      window.location.href = `mailto:${email}`;
+    }
   }
 }
