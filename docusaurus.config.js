@@ -17,7 +17,6 @@ const siteLicense = {
   icon: "https://i.creativecommons.org/l/by/4.0/80x15.png",
   url: "http://creativecommons.org/licenses/by/4.0/",
 };
-const emailSalt = "#contact-email";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Replica_IO",
