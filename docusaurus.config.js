@@ -172,7 +172,7 @@ const config = {
             items: [
               {
                 label: "Email",
-                href: emailSalt,
+                href: "#contact-email",
               },
             ],
           },
