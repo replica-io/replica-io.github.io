@@ -6,7 +6,6 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const lightCodeTheme = prismThemes.github;
 const darkCodeTheme = prismThemes.dracula;
 
-
 const sponsorUrl = 'https://github.com/sponsors/replica-io';
 const gitHubUrl = 'https://github.com/replica-io/replica-io';
 const discordUrl = 'https://discord.replica-io.dev';
