@@ -135,6 +135,13 @@ const config = {
             position: 'right',
             className: 'navbar-icon',
           },
+          {
+            href: '/#contact-email',
+            'aria-label': 'Contact Email',
+            html: '<i class="fa-regular fa-envelope"></i>',
+            position: 'right',
+            className: 'navbar-icon',
+          },
         ],
       },
       footer: {
