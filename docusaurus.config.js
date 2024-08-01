@@ -171,7 +171,7 @@ const config = {
             items: [
               {
                 label: 'Email',
-                href: '#contact-email',
+                href: '/#contact-email',
               },
             ],
           },
