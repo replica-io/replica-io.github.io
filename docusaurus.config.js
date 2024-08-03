@@ -28,6 +28,7 @@ const config = {
   url: 'https://replica-io.dev',
   baseUrl: '/',
 
+
   customFields: {
     description: 'An open-source framework for building practical distributed replication mechanisms.',
     gitHubUrl: gitHubUrl,
@@ -47,6 +48,15 @@ const config = {
     locales: ['en'],
   },
 
+  plugins:[
+    [
+      './plugins/blog-plugin',
+      {
+        showReadingTime: true
+      }
+    ]
+  ],
+
   presets: [
     [
       'classic',
@@ -57,15 +67,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl: `${siteGitHubUrl}/edit/main/`,
         },
-        blog: {
-          blogTitle: 'Replica_IO Blog',
-          blogDescription: 'Blog of the Replica_IO project - an open-source framework for building practical distributed replication mechanisms.',
-          showReadingTime: true,
-          showLastUpdateTime: true,
-          showLastUpdateAuthor: true,
-          // Remove this to remove the "edit this page" links.
-          editUrl: `${siteGitHubUrl}/edit/main/`,
-        },
+        blog: false,
         theme: {
           customCss: ['./src/css/custom.css'],
         },
