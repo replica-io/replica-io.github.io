@@ -5,8 +5,8 @@ import Layout from '@theme/Layout';
 import clsx from 'clsx';
 
 import Heading from '@theme/Heading';
-import styles from './index.module.css';
 import RecentBlogPosts from '../components/RecentBlogPosts';
+import styles from './index.module.css';
 
 
 function HomepageHeader() {
@@ -117,9 +117,24 @@ export default function Home() {
                 </div>
               </p>
             </p>
+            <h2 className="text--center">
+              Sponsors
+            </h2>
+            <p className="row">
+              <p className="col col--8 col--offset-2 text--center">
+                <p>
+                  Supported through the <a href="https://blueyard.medium.com/announcing-the-blueyard-dyor-do-your-own-research-funding-program-9be5f2f23d37" target="_blank" rel="noopener"> DYOR </a> funding program by BlueYard Capital.
+                </p>
+                <p>
+                  <a href="https://www.blueyard.com" target="_blank" rel="noopener">
+                    <img alt="BlueYard Capital" src="img/blueyard-logo.jpg" width="64px" />
+                  </a>
+                </p>
+              </p>
+            </p>
           </p>
         </p>
-        <div className="container padding-vert--xl">
+        <div className="container padding-bottom--xl">
           <RecentBlogPosts nrPosts={nrRecentBlogPosts} />
         </div>
       </main>
