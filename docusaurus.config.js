@@ -32,7 +32,8 @@ const config = {
     description: 'An open-source framework for building practical distributed replication mechanisms.',
     gitHubUrl: gitHubUrl,
     siteLicense: siteLicense,
-    recentBlogPostsOnHomePage: 5
+    recentBlogPostsOnHomePage: 5,
+    disqusShortname: 'https-replica-io-dev'
   },
 
   // GitHub pages deployment config.

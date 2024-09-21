@@ -6,7 +6,7 @@ export default function CopyrightWrapper(props) {
   const { siteConfig: { customFields: {
     siteLicense,
   } } } = useDocusaurusContext();
-
+  
   return (
     <>
       <div>Made with ❤️ on Earth.</div>
