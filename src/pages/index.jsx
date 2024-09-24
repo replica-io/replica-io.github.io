@@ -56,15 +56,16 @@ export default function Home() {
             <p className="row">
               <p className="col col--8 col--offset-2">
                 <p>
-                  Replica_IO is about making a breakthrough in designing
-                  and implementing distributed protocols for the future of
-                  decentralized computing! 🚀
+                  Replica_IO is about consolidation of the best available
+                  ideas and principles to-date in designing and
+                  implementing distributed protocols for the future of
+                  decentralized computing.
                 </p>
                 <p>
-                  The purpose of this project is to advance computing by
-                  making highly reliable distributed systems more
-                  practical to implement. The goal is to develop a
-                  well-supported and widely used state-of-the-art
+                  The purpose of this project is to provide tools that
+                  will make the implementation of highly reliable
+                  distributed systems more practical. The goal is to
+                  develop a well-supported and widely used state-of-the-art
                   framework for building distributed replication
                   mechanisms. Specifically, the framework should provide a
                   carefully designed collection of primitives, components,
