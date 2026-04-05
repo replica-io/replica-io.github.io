@@ -64,6 +64,12 @@ const config = {
 
   clientModules: ['/js/unscrambleEmail.js'],
 
+  future: {
+    experimental_faster: {
+      lightningCssMinimizer: true,
+    },
+  },
+
   plugins: [
     [
       './plugins/blog-plugin',
