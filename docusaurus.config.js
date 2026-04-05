@@ -26,14 +26,14 @@ const siteLicense = {
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Replica_IO',
-  tagline: 'Compose practical distributed replication mechanisms',
+  tagline: 'Express the essence of distributed replication and coordination',
   favicon: 'img/favicon.ico',
 
   url: 'https://replica-io.dev',
   baseUrl: '/',
 
   customFields: {
-    description: 'An open-source framework for building practical distributed replication mechanisms.',
+    description: 'An open-source project rethinking distributed replication and coordination — from first principles to a practical framework.',
     gitHubUrl: gitHubUrl,
     siteLicense: siteLicense,
     recentBlogPostsOnHomePage: 5,
@@ -80,7 +80,7 @@ const config = {
       './plugins/blog-plugin',
       {
         blogTitle: 'Replica_IO Blog',
-        blogDescription: 'Blog of the Replica_IO project - an open-source framework for building practical distributed replication mechanisms.',
+        blogDescription: 'Blog of the Replica_IO project — rethinking distributed replication and coordination from first principles to a practical framework.',
         showReadingTime: true,
         showLastUpdateTime: true,
         showLastUpdateAuthor: true,
@@ -135,7 +135,7 @@ const config = {
       metadata: [
         {
           name: 'keywords',
-          content: 'decentralization, decentralized-computing, distributed-systems, fault-tolerance, replication',
+          content: 'research, programming-model, concurrency, distributed-computing, decentralized-computing, fault-tolerance, replication, coordination, consensus, rust',
         },
       ],
       colorMode: {
