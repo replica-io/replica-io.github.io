@@ -34,13 +34,14 @@ can be served using any static contents hosting service.
 ### Deployment
 
 This website is configured for deployment to [GitHub
-Pages][github-pages]. The deployment is triggered with [GitHub
-Actions][github-actions]; it uses a popular third-party deployment
-action:
-[peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages).
+Pages][github-pages]. [GitHub Actions][github-actions] build and
+publish it on pushes to `main` using GitHub's official Pages actions:
+[upload-pages-artifact] and [deploy-pages].
 
 [github-pages]: https://pages.github.com/
 [github-actions]: https://help.github.com/actions
+[upload-pages-artifact]: https://github.com/actions/upload-pages-artifact
+[deploy-pages]: https://github.com/actions/deploy-pages
 
 ### License
 
