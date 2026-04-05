@@ -56,65 +56,11 @@ export default function Home() {
             <p className="row">
               <p className="col col--8 col--offset-2">
                 <p>
-                  Replica_IO is about making a breakthrough in designing
-                  and implementing distributed protocols for the future of
-                  decentralized computing! 🚀
+                  This is an independent, open-ended effort to rethink distributed and concurrent computing from first principles, searching for a most natural way to express it. The emerging ideas are to take shape in a minimalistic, Rust-based open-source framework for core mechanisms of decentralized, distributed systems — such as BFT consensus.
                 </p>
                 <p>
-                  The purpose of this project is to advance computing by
-                  making highly reliable distributed systems more
-                  practical to implement. The goal is to develop a
-                  well-supported and widely used state-of-the-art
-                  framework for building distributed replication
-                  mechanisms. Specifically, the framework should provide a
-                  carefully designed collection of primitives, components,
-                  tools, and guidelines for developing core mechanisms of
-                  fault-tolerant distributed systems. Possible areas of
-                  application include blockchain, cloud computing,
-                  distributed databases, etc. Following are the key areas
-                  of focus:
+                  For more details, check out the <a href="/about">About</a> page.
                 </p>
-              </p>
-            </p>
-            <p className="row">
-              <p className="col col--10 col--offset-1">
-                <div className="row margin-vert--lg">
-                  <div className="col">
-                    <h3>Simplicity</h3>
-                    <p>
-                      Making protocol implementations well structured
-                      and understandable.
-                    </p>
-                  </div>
-                  <div className="col">
-                    <h3>Flexibility</h3>
-                    <p>
-                      Keeping the framework adaptable, widely
-                      applicable, and evolvable.
-                    </p>
-                  </div>
-                  <div className="col">
-                    <h3>Reliability</h3>
-                    <p>
-                      Ensuring that protocol correctness is verifiable
-                      and the implementation is resilient.
-                    </p>
-                  </div>
-                  <div className="col">
-                    <h3>Efficiency</h3>
-                    <p>
-                      Allowing for various optimizations and
-                      delivering good performance.
-                    </p>
-                  </div>
-                  <div className="col">
-                    <h3>Maintainability</h3>
-                    <p>
-                      Catering for maintenance needs and providing
-                      great diagnostic mechanisms.
-                    </p>
-                  </div>
-                </div>
               </p>
             </p>
             <h2 className="text--center">
