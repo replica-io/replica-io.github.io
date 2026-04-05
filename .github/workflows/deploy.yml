@@ -6,16 +6,20 @@ on:
       - main
 
 jobs:
-  build:
-    name: Build Docusaurus
+  deploy:
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v4
         with:
           # Docusaurus needs the full commit history to correctly
           # determine the last update time and author.
           fetch-depth: 0
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v4
         with:
           node-version-file: package.json
           cache: npm
@@ -25,24 +29,11 @@ jobs:
       - name: Build website
         run: npm run build
 
-      - name: Upload Build Artifact
-        uses: actions/upload-pages-artifact@v3
+      # Popular action to deploy to GitHub Pages:
+      # Docs: https://github.com/peaceiris/actions-gh-pages
+      - name: Deploy website
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: build
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
 
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
