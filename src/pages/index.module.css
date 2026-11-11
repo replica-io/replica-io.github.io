@@ -25,3 +25,20 @@
 .buttons a {
   margin: 20px 36px;
 }
+
+.supportItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.supportLogo {
+  flex-shrink: 0;
+}
+
+.supportText {
+  flex: 0 1 24rem;
+  text-align: left;
+  text-wrap: balance;
+}

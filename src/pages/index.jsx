@@ -68,13 +68,13 @@ export default function Home() {
             </h2>
             <p className="row">
               <p className="col col--8 col--offset-2 text--center">
-                <p>
-                  Supported through the <a href="https://blueyard.medium.com/announcing-the-blueyard-dyor-do-your-own-research-funding-program-9be5f2f23d37" target="_blank" rel="noopener"> DYOR </a> funding program by BlueYard Capital.
-                </p>
-                <p>
-                  <a href="https://www.blueyard.com" target="_blank" rel="noopener">
+                <p className={styles.supportItem}>
+                  <a href="https://www.blueyard.com" target="_blank" rel="noopener" className={styles.supportLogo}>
                     <img alt="BlueYard Capital" src="img/blueyard-logo.jpg" width="64px" />
                   </a>
+                  <span className={styles.supportText}>
+                    Supported through the <a href="https://blueyard.medium.com/announcing-the-blueyard-dyor-do-your-own-research-funding-program-9be5f2f23d37" target="_blank" rel="noopener">DYOR</a>&nbsp;funding program by BlueYard&nbsp;Capital.
+                  </span>
                 </p>
               </p>
             </p>
