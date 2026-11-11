@@ -64,7 +64,7 @@ export default function Home() {
               </p>
             </p>
             <h2 className="text--center">
-              Sponsors
+              Support
             </h2>
             <p className="row">
               <p className="col col--8 col--offset-2 text--center">
@@ -74,6 +74,12 @@ export default function Home() {
                   </a>
                   <span className={styles.supportText}>
                     The research was partly supported through the <a href="https://blueyard.medium.com/announcing-the-blueyard-dyor-do-your-own-research-funding-program-9be5f2f23d37" target="_blank" rel="noopener">DYOR</a>&nbsp;funding program by BlueYard&nbsp;Capital.
+                  </span>
+                </p>
+                <p className={styles.supportItem}>
+                  <i className={clsx('fa-regular fa-handshake', styles.supportIcon)} aria-hidden="true"></i>
+                  <span className={styles.supportText}>
+                    Share the <a href="/about">vision</a> and see potential in this work?<br/>Let’s <a href="/#contact-email">get in touch</a>.
                   </span>
                 </p>
               </p>
